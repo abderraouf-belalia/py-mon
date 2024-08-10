@@ -1,5 +1,5 @@
 import subprocess
-from sys import executable
+from sys import executable, stderr, stdout
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 
@@ -17,9 +17,7 @@ class Monitor:
         self.restart_process()
 
     def __init__(self, arguments):
-        self.filename = arguments.filename + (
-            ".py" if not arguments.filename.endswith(".py") else ""
-        )
+        self.command = arguments.command
         self.patterns = arguments.patterns
         self.args = arguments.args
         self.watch = arguments.watch
@@ -59,9 +57,12 @@ class Monitor:
         self.start_process()
 
     def start_process(self):
+
         if not self.clean:
-            log(Color.GREEN, f"starting {self.filename}")
-        self.process = subprocess.Popen([executable, self.filename, *self.args])
+            log(Color.GREEN, f"starting {self.command}")
+        self.process = subprocess.Popen(
+            [*self.command.split(" "), *self.args],  # Command to execute
+        )
 
     def stop_process(self):
         self.process.terminate()

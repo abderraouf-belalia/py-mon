@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pymon"
+version = "0.1.0"
+description = ""
+authors = ["Abderraouf Belalia <abderraoufbelalia@symplectic.link>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+colorama = "^0.4.6"
+argparse = "^1.4.0"
+watchdog = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

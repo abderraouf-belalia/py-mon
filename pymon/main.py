@@ -9,10 +9,10 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument(
-    "filename",
+    "command",
     type=str,
-    help="the file to be executed with pymon",
-    metavar="filename",
+    help="the command to be executed by pymon",
+    metavar="command",
 )
 
 parser.add_argument(
