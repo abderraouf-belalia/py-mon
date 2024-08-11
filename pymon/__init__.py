@@ -5,3 +5,4 @@ pymon Package
 """
 
 from .main import main
+from .monitor import Arguments
