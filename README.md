@@ -8,6 +8,10 @@ I wanted to make this package as easy as possible to use. Here's a quick start, 
 ```
 pip install -U py-mon
 ```
+If you are using poetry,
+```
+poetry add --group dev py-mon
+```
 ### Execution
 ```
 pymon filename.py

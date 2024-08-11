@@ -1,8 +1,12 @@
 [tool.poetry]
 name = "pymon"
-version = "0.1.0"
-description = ""
-authors = ["Abderraouf Belalia <abderraoufbelalia@symplectic.link>"]
+version = "2.1.5"
+description = "A modern, easy-to-use package to automatically restart a Python application when file changes are detected!"
+authors = ["Kevin Thomas <kevin.jt2007@gmail.com>"]
+maintainers = [
+    "Kevin Thomas <kevin.jt2007@gmail.com>",
+    "Abderraouf Belalia <abderraoufbelalia@symplectic.link>",
+]
 license = "MIT"
 readme = "README.md"
 
@@ -12,6 +16,9 @@ colorama = "^0.4.6"
 argparse = "^1.4.0"
 watchdog = "^4.0.1"
 
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.1"
 
 [build-system]
 requires = ["poetry-core"]
